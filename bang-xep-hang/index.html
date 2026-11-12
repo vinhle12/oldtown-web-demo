@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Bảng xếp hạng tiền — OLD TOWN</title>
+<meta name="description" content="OLD TOWN — server Minecraft sinh tồn Việt Nam: xây thị trấn, kinh tế, hầm ngục 10 cấp. Chơi chung PC & điện thoại (PE).">
+<meta name="theme-color" content="#151321">
+<meta name="color-scheme" content="dark">
+<link rel="icon" href="/oldtown-web-demo/static/img/icon.png">
+<link rel="apple-touch-icon" href="/oldtown-web-demo/static/img/icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Handjet:wght@400..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/oldtown-web-demo/static/style.css?v=mwd7g08h">
+
+<meta name="robots" content="noindex">
+</head>
+<body>
+<a class="skip-link" href="#main">Bỏ qua, tới nội dung chính</a>
+<header class="hud">
+  <div class="hud-in">
+    <a class="brand" href="/oldtown-web-demo/" aria-label="OLD TOWN — về trang chủ">
+      <img class="brand-mark" src="/oldtown-web-demo/static/img/art/block.png" width="32" height="36" alt="">
+      <span class="brand-name">OLD TOWN</span>
+    </a>
+    <nav class="hotbar" id="navLinks" aria-label="Điều hướng chính">
+      <a href="/oldtown-web-demo/"><img src="/oldtown-web-demo/static/img/px/house.svg" width="24" height="24" alt=""><span>Trang chủ</span></a>
+      <a href="/oldtown-web-demo/luat"><img src="/oldtown-web-demo/static/img/px/book.svg" width="24" height="24" alt=""><span>Luật</span></a>
+      <a href="/oldtown-web-demo/huong-dan"><img src="/oldtown-web-demo/static/img/px/compass.svg" width="24" height="24" alt=""><span>Hướng dẫn</span></a>
+      <a href="/oldtown-web-demo/dien-dan"><img src="/oldtown-web-demo/static/img/px/sign.svg" width="24" height="24" alt=""><span>Diễn đàn</span></a>
+      <a href="/oldtown-web-demo/cap-nhat"><img src="/oldtown-web-demo/static/img/px/paper.svg" width="24" height="24" alt=""><span>Cập nhật</span></a>
+      <a href="/oldtown-web-demo/bang-xep-hang" class="active"><img src="/oldtown-web-demo/static/img/px/coin.svg" width="24" height="24" alt=""><span>Top tiền</span></a>
+      <a href="/oldtown-web-demo/tai-khoan"><img src="/oldtown-web-demo/static/img/px/head.svg" width="24" height="24" alt=""><span>Tài khoản</span></a>
+    </nav>
+    <a class="hud-status" href="/oldtown-web-demo/#vao-server" title="Trạng thái server — bấm để xem địa chỉ vào chơi">
+      <span class="dot" id="hudDot"></span><span id="hudOnline">…</span>
+    </a>
+  </div>
+  <div class="xp" aria-hidden="true"><i id="xpFill"></i></div>
+</header>
+<main class="page" id="main">
+<header class="page-hero">
+  <div class="page-hero-in">
+    <div>
+      <p class="kicker">Bảng vàng thị trấn</p>
+      <h1 class="page-title">Top <em>tiền</em></h1>
+      <p class="page-lead">Những cư dân giàu nhất OLD TOWN — số dư VNĐ thật trong game, tự động làm mới mỗi phút. Trong game gõ <b>/baltop</b> để xem bảng tương tự.</p>
+    </div>
+    <img class="page-hero-art" src="/oldtown-web-demo/static/img/px/trophy.svg" width="128" height="128" alt="">
+  </div>
+</header>
+<section class="section narrow">
+  <div class="podium" id="podium"></div>
+  <div class="table-wrap">
+    <table class="board">
+      <thead><tr><th>Hạng</th><th>Người chơi</th><th class="num">Số dư</th></tr></thead>
+      <tbody id="boardBody"><tr><td colspan="3" class="muted">Đang tải số liệu từ game…</td></tr></tbody>
+    </table>
+  </div>
+  <p class="muted center">Muốn có tên trên bảng này? <a href="/oldtown-web-demo/huong-dan">Xem cách kiếm tiền</a> — điểm danh mỗi ngày, đủ giờ chơi, và gửi ngân hàng hưởng lãi 2%/ngày.</p>
+</section>
+
+</main>
+<footer class="footer">
+  <div class="footer-grass" aria-hidden="true"></div>
+  <div class="footer-soil">
+    <div class="footer-inner">
+      <div class="footer-about">
+        <div class="footer-brand"><img src="/oldtown-web-demo/static/img/art/block.png" width="32" height="36" alt="">OLD TOWN</div>
+        <p>Server Minecraft sinh tồn Việt Nam. Một tài khoản dùng chung cho web và game — đăng ký ở đâu, chơi ở đó.</p>
+      </div>
+      <nav class="footer-links" aria-label="Liên kết cuối trang">
+        <div class="footer-col">
+          <span class="footer-h">Thị trấn</span>
+          <a href="/oldtown-web-demo/luat">Luật server</a>
+          <a href="/oldtown-web-demo/huong-dan">Hướng dẫn tân thủ</a>
+          <a href="/oldtown-web-demo/cap-nhat">Nhật ký cập nhật</a>
+        </div>
+        <div class="footer-col">
+          <span class="footer-h">Cư dân</span>
+          <a href="/oldtown-web-demo/dien-dan">Diễn đàn cư dân</a>
+          <a href="/oldtown-web-demo/bang-xep-hang">Bảng xếp hạng tiền</a>
+          <a href="/oldtown-web-demo/tai-khoan">Đăng ký / Đăng nhập</a>
+        </div>
+      </nav>
+    </div>
+  </div>
+  <div class="footer-stone">
+    <i class="ore ore-1" aria-hidden="true"></i><i class="ore ore-2" aria-hidden="true"></i><i class="ore ore-3" aria-hidden="true"></i><i class="ore ore-4" aria-hidden="true"></i>
+    <div class="footer-note">
+      <span>OLD TOWN · Mọi số liệu trên trang đều lấy trực tiếp từ game</span>
+      <span>Không phải sản phẩm chính thức của Minecraft. Không liên kết với Mojang hay Microsoft.</span>
+    </div>
+  </div>
+  <div class="footer-bedrock" aria-hidden="true"></div>
+</footer>
+<div class="demo-note" role="note">Bản demo giao diện · dữ liệu mẫu · đăng nhập và đăng bài không hoạt động ở đây</div>
+<div id="toast" class="toast" role="status"></div>
+<script src="/oldtown-web-demo/static/app.js?v=mwd7g08h"></script>
+</body>
+</html>

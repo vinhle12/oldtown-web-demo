@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Nhật ký cập nhật — OLD TOWN</title>
+<meta name="description" content="OLD TOWN — server Minecraft sinh tồn Việt Nam: xây thị trấn, kinh tế, hầm ngục 10 cấp. Chơi chung PC & điện thoại (PE).">
+<meta name="theme-color" content="#151321">
+<meta name="color-scheme" content="dark">
+<link rel="icon" href="/oldtown-web-demo/static/img/icon.png">
+<link rel="apple-touch-icon" href="/oldtown-web-demo/static/img/icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Handjet:wght@400..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/oldtown-web-demo/static/style.css?v=mwd7g08f">
+
+<meta name="robots" content="noindex">
+</head>
+<body>
+<a class="skip-link" href="#main">Bỏ qua, tới nội dung chính</a>
+<header class="hud">
+  <div class="hud-in">
+    <a class="brand" href="/oldtown-web-demo/" aria-label="OLD TOWN — về trang chủ">
+      <img class="brand-mark" src="/oldtown-web-demo/static/img/art/block.png" width="32" height="36" alt="">
+      <span class="brand-name">OLD TOWN</span>
+    </a>
+    <nav class="hotbar" id="navLinks" aria-label="Điều hướng chính">
+      <a href="/oldtown-web-demo/"><img src="/oldtown-web-demo/static/img/px/house.svg" width="24" height="24" alt=""><span>Trang chủ</span></a>
+      <a href="/oldtown-web-demo/luat"><img src="/oldtown-web-demo/static/img/px/book.svg" width="24" height="24" alt=""><span>Luật</span></a>
+      <a href="/oldtown-web-demo/huong-dan"><img src="/oldtown-web-demo/static/img/px/compass.svg" width="24" height="24" alt=""><span>Hướng dẫn</span></a>
+      <a href="/oldtown-web-demo/dien-dan"><img src="/oldtown-web-demo/static/img/px/sign.svg" width="24" height="24" alt=""><span>Diễn đàn</span></a>
+      <a href="/oldtown-web-demo/cap-nhat"><img src="/oldtown-web-demo/static/img/px/paper.svg" width="24" height="24" alt=""><span>Cập nhật</span></a>
+      <a href="/oldtown-web-demo/bang-xep-hang"><img src="/oldtown-web-demo/static/img/px/coin.svg" width="24" height="24" alt=""><span>Top tiền</span></a>
+      <a href="/oldtown-web-demo/tai-khoan"><img src="/oldtown-web-demo/static/img/px/head.svg" width="24" height="24" alt=""><span>Tài khoản</span></a>
+    </nav>
+    <a class="hud-status" href="/oldtown-web-demo/#vao-server" title="Trạng thái server — bấm để xem địa chỉ vào chơi">
+      <span class="dot" id="hudDot"></span><span id="hudOnline">…</span>
+    </a>
+  </div>
+  <div class="xp" aria-hidden="true"><i id="xpFill"></i></div>
+</header>
+<main class="page" id="main">
+<header class="page-hero">
+  <div class="page-hero-in">
+    <div>
+      <p class="kicker">Nhật ký thị trấn</p>
+      <h1 class="page-title">Cập nhật <em>mới nhất</em></h1>
+      <p class="page-lead">Mọi thay đổi lớn của server đều được ghi lại ở đây — tính năng mới, cân bằng lại, siết các giới hạn công bằng. Đợt nào có thay đổi luật chơi, trang <a href="/oldtown-web-demo/luat">Luật</a> cũng được cập nhật cùng lúc.</p>
+    </div>
+    <img class="page-hero-art" src="/oldtown-web-demo/static/img/px/paper.svg" width="128" height="128" alt="">
+  </div>
+</header>
+<div class="doc">
+  <div class="doc-body log">
+  <div class="log-entry">
+    <h3><span class="sec-no">23/10</span>HỆ NGHỀ NGHIỆP — MỖI NGƯỜI MỘT NGHỀ — ĐÊM 23/10/2026</h3>
+    <ul>
+      <li><b>Ra mắt hệ nghề nghiệp chuyên môn:</b> 6 nghề — Thợ mỏ, Tiều phu, Nông dân, Thợ săn, Ngư dân, Thợ đào. Mỗi cư dân chọn đúng một nghề; chỉ nghề đó mới làm ra sản phẩm trong lĩnh vực của mình (người khác đập quặng vỡ vụn, chặt cây không ra gỗ, câu cá chỉ lên rác…).</li>
+      <li><b>Làm nghề có lương:</b> sản phẩm làm ra được trả VNĐ + kinh nghiệm lên cấp 1–50 (mỗi cấp +2% tiền công, tăng cơ hội rơi đôi). Chọn nghề gõ <b>/nghe</b>, lần đầu miễn phí; đổi nghề 25.000₫, cách nhau 7 ngày, cấp cũ làm lại từ đầu.</li>
+      <li><b>Chợ người chơi lên ngôi:</b> shop của server ngừng thu mua hàng nghề — mua bán qua /ah và /trade với nhau mới là đầu ra thật. Làng nào đủ mặt nghề, làng đó mạnh.</li>
+      <li>Hướng dẫn chi tiết ở mục IV trang <a href="/oldtown-web-demo/huong-dan">Hướng dẫn</a>.</li>
+    </ul>
+  </div>
+
+  <div class="log-entry">
+    <h3><span class="sec-no">23/10</span>CÂN BẰNG MÁY MÓC &amp; TIỆN ÍCH HOANG DÃ — TỐI 23/10/2026</h3>
+    <ul>
+      <li><b>Chống treo máy AFK:</b> đứng yên quá 15 phút sẽ ngừng được tính tiền thưởng giờ chơi; treo quá 30 phút server tự ngắt kết nối (vào lại bình thường bất cứ lúc nào).</li>
+      <li><b>Động vật nuôi:</b> tối đa 15 con mỗi chunk; dồn quá 8 con vào cùng một ô thì chúng nghẹt thở chết dần theo luật gốc của game — hết thời chuồng một ô.</li>
+      <li><b>Hoang dã thoáng hơn:</b> ở đất hoang, nay đặt/đập đuốc tự do và đập được quặng lộ thiên (nhìn thấy tự nhiên trên mặt đất, vách hang) mà không cần đất làng.</li>
+      <li><b>Trang trí:</b> khung tranh, khung phát sáng, giáp trưng bày tối đa 64 cái mỗi chunk.</li>
+      <li><b>Xe goòng phễu</b> vào danh sách linh kiện bị khóa cùng nhóm redstone.</li>
+      <li><b>Tinh chỉnh máy chủ:</b> vùng mô phỏng quanh mỗi người chơi thu về mức hợp lý, đồ rơi tự gộp thành cụm nhanh hơn và tự hủy sau 3 phút — giữ trải nghiệm mượt mà cho mọi người chơi.</li>
+    </ul>
+  </div>
+
+  <div class="log-entry">
+    <h3><span class="sec-no">23/10</span>TÀI KHOẢN GMAIL &amp; SIẾT REDSTONE — CHIỀU 23/10/2026</h3>
+    <ul>
+      <li><b>Đăng ký chỉ trên website</b>, xác thực bằng mã OTP gửi về Gmail; quên mật khẩu cũng lấy lại bằng Gmail.</li>
+      <li><b>Đăng nhập trong game bằng Gmail</b>: /login &lt;Gmail&gt; &lt;mật khẩu&gt; — không còn phải gõ tên nhân vật dài, khó đọc của bản PE.</li>
+      <li><b>Redstone:</b> khóa đặt/chế tạo gần hết linh kiện mạch (piston, observer, phễu, đuốc đỏ…); mạch sẵn có bị giới hạn tần suất theo quy định mới. Chi tiết ở §7 trang Luật.</li>
+      <li><b>Gỡ bỏ spawner quái và dân làng</b> khỏi thế giới để cân bằng kinh tế và giữ thế giới gọn gàng.</li>
+      <li><b>Sách hướng dẫn không còn mất khi chết</b> — luôn quay lại tay bạn khi hồi sinh.</li>
+    </ul>
+  </div>
+
+  <div class="log-entry">
+    <h3><span class="sec-no">22/10</span>RA MẮT WEBSITE &amp; ĐỘI BOT DISCORD — 22/10/2026</h3>
+    <ul>
+      <li>Website OLD TOWN mở cửa: trang chủ đọc số liệu thật từ game, bảng xếp hạng tiền VNĐ, luật và hướng dẫn đầy đủ.</li>
+      <li>Hai bot Discord vào việc: <b>OLD TOWN Guard</b> gác cổng chống spam/scam 24/7 và <b>OLD TOWN</b> nối cầu chat hai chiều Discord ↔ trong game, kèm Tài Xỉu giải trí bằng Xu.</li>
+      <li>Thương hiệu OLD TOWN đồng bộ khắp nơi: panel quản trị, MOTD, màn hình chờ bản PE.</li>
+    </ul>
+  </div>
+  </div>
+</div>
+
+</main>
+<footer class="footer">
+  <div class="footer-grass" aria-hidden="true"></div>
+  <div class="footer-soil">
+    <div class="footer-inner">
+      <div class="footer-about">
+        <div class="footer-brand"><img src="/oldtown-web-demo/static/img/art/block.png" width="32" height="36" alt="">OLD TOWN</div>
+        <p>Server Minecraft sinh tồn Việt Nam. Một tài khoản dùng chung cho web và game — đăng ký ở đâu, chơi ở đó.</p>
+      </div>
+      <nav class="footer-links" aria-label="Liên kết cuối trang">
+        <div class="footer-col">
+          <span class="footer-h">Thị trấn</span>
+          <a href="/oldtown-web-demo/luat">Luật server</a>
+          <a href="/oldtown-web-demo/huong-dan">Hướng dẫn tân thủ</a>
+          <a href="/oldtown-web-demo/cap-nhat">Nhật ký cập nhật</a>
+        </div>
+        <div class="footer-col">
+          <span class="footer-h">Cư dân</span>
+          <a href="/oldtown-web-demo/dien-dan">Diễn đàn cư dân</a>
+          <a href="/oldtown-web-demo/bang-xep-hang">Bảng xếp hạng tiền</a>
+          <a href="/oldtown-web-demo/tai-khoan">Đăng ký / Đăng nhập</a>
+        </div>
+      </nav>
+    </div>
+  </div>
+  <div class="footer-stone">
+    <i class="ore ore-1" aria-hidden="true"></i><i class="ore ore-2" aria-hidden="true"></i><i class="ore ore-3" aria-hidden="true"></i><i class="ore ore-4" aria-hidden="true"></i>
+    <div class="footer-note">
+      <span>OLD TOWN · Mọi số liệu trên trang đều lấy trực tiếp từ game</span>
+      <span>Không phải sản phẩm chính thức của Minecraft. Không liên kết với Mojang hay Microsoft.</span>
+    </div>
+  </div>
+  <div class="footer-bedrock" aria-hidden="true"></div>
+</footer>
+<div class="demo-note" role="note">Bản demo giao diện · dữ liệu mẫu · đăng nhập và đăng bài không hoạt động ở đây</div>
+<div id="toast" class="toast" role="status"></div>
+<script src="/oldtown-web-demo/static/app.js?v=mwd7g08f"></script>
+</body>
+</html>

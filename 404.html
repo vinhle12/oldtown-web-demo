@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>OLD TOWN — Server Minecraft Việt Nam</title>
+<meta name="description" content="OLD TOWN — server Minecraft sinh tồn Việt Nam: xây thị trấn, kinh tế, hầm ngục 10 cấp. Chơi chung PC & điện thoại (PE).">
+<meta name="theme-color" content="#151321">
+<meta name="color-scheme" content="dark">
+<link rel="icon" href="/oldtown-web-demo/static/img/icon.png">
+<link rel="apple-touch-icon" href="/oldtown-web-demo/static/img/icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Handjet:wght@400..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/oldtown-web-demo/static/style.css?v=mwd7g087">
+
+<meta name="robots" content="noindex">
+</head>
+<body>
+<a class="skip-link" href="#main">Bỏ qua, tới nội dung chính</a>
+<header class="hud">
+  <div class="hud-in">
+    <a class="brand" href="/oldtown-web-demo/" aria-label="OLD TOWN — về trang chủ">
+      <img class="brand-mark" src="/oldtown-web-demo/static/img/art/block.png" width="32" height="36" alt="">
+      <span class="brand-name">OLD TOWN</span>
+    </a>
+    <nav class="hotbar" id="navLinks" aria-label="Điều hướng chính">
+      <a href="/oldtown-web-demo/" class="active"><img src="/oldtown-web-demo/static/img/px/house.svg" width="24" height="24" alt=""><span>Trang chủ</span></a>
+      <a href="/oldtown-web-demo/luat"><img src="/oldtown-web-demo/static/img/px/book.svg" width="24" height="24" alt=""><span>Luật</span></a>
+      <a href="/oldtown-web-demo/huong-dan"><img src="/oldtown-web-demo/static/img/px/compass.svg" width="24" height="24" alt=""><span>Hướng dẫn</span></a>
+      <a href="/oldtown-web-demo/dien-dan"><img src="/oldtown-web-demo/static/img/px/sign.svg" width="24" height="24" alt=""><span>Diễn đàn</span></a>
+      <a href="/oldtown-web-demo/cap-nhat"><img src="/oldtown-web-demo/static/img/px/paper.svg" width="24" height="24" alt=""><span>Cập nhật</span></a>
+      <a href="/oldtown-web-demo/bang-xep-hang"><img src="/oldtown-web-demo/static/img/px/coin.svg" width="24" height="24" alt=""><span>Top tiền</span></a>
+      <a href="/oldtown-web-demo/tai-khoan"><img src="/oldtown-web-demo/static/img/px/head.svg" width="24" height="24" alt=""><span>Tài khoản</span></a>
+    </nav>
+    <a class="hud-status" href="/oldtown-web-demo/#vao-server" title="Trạng thái server — bấm để xem địa chỉ vào chơi">
+      <span class="dot" id="hudDot"></span><span id="hudOnline">…</span>
+    </a>
+  </div>
+  <div class="xp" aria-hidden="true"><i id="xpFill"></i></div>
+</header>
+<main class="page" id="main">
+<section class="hero" id="vao-server">
+  <div class="hero-bg" aria-hidden="true">
+    <video autoplay muted loop playsinline preload="metadata" poster="/oldtown-web-demo/static/img/hero-sakura.webp">
+      <source src="/oldtown-web-demo/static/img/hero-sakura.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="hero-in">
+    <a class="update-banner" href="/oldtown-web-demo/cap-nhat">
+      <span class="ub-slot"><img src="/oldtown-web-demo/static/img/px/star.svg" width="24" height="24" alt=""></span>
+      <span class="ub-text"><b>MỚI · Hệ nghề nghiệp đã ra mắt</b><span>Mỗi người một nghề, chợ người chơi lên ngôi — xem nhật ký cập nhật →</span></span>
+    </a>
+
+    <div class="hero-main">
+      <p class="status-pill"><span class="dot" id="statusDot"></span><span id="statusText">Đang kiểm tra server…</span></p>
+      <div class="hero-title">
+        <h1>Một thị trấn <em>đáng để sống.</em></h1>
+        <span class="splash" aria-hidden="true">Chơi chung PC &amp; điện thoại!</span>
+      </div>
+      <p class="hero-standfirst">OLD TOWN là server sinh tồn nơi bạn <b>lập làng, mua đất, làm giàu</b> và leo hầm ngục 10 cấp — chơi chung giữa <b>máy tính (Java)</b> và <b>điện thoại (PE)</b> trong cùng một thế giới, một tài khoản cho cả web lẫn game.</p>
+      <div class="hero-actions">
+        <a class="btn btn-green btn-lg" href="/oldtown-web-demo/tai-khoan">Đăng ký tài khoản</a>
+        <a class="btn btn-lg" href="/oldtown-web-demo/huong-dan">Đọc hướng dẫn</a>
+      </div>
+      <div class="join-box" aria-label="Địa chỉ vào server">
+        <button class="ip-chip" data-copy="java" type="button" title="Bấm để sao chép địa chỉ Java">
+          <span class="ip-label">Java · PC</span>
+          <span class="ip-value" id="ipJava">…</span>
+          <span class="ip-copy">SAO CHÉP</span>
+        </button>
+        <button class="ip-chip" data-copy="pe" type="button" title="Bấm để sao chép địa chỉ PE">
+          <span class="ip-label">PE · Điện thoại</span>
+          <span class="ip-value" id="ipPe">…</span>
+          <span class="ip-copy">SAO CHÉP</span>
+        </button>
+      </div>
+    </div>
+
+    <aside class="hud-score" aria-label="Số liệu trực tiếp từ game">
+      <div class="hud-score-title">OLD TOWN</div>
+      <dl class="stats">
+        <div class="stat"><dt class="stat-label">Người đang chơi</dt><dd class="stat-num" id="stOnline">–</dd></div>
+        <div class="stat"><dt class="stat-label">Cư dân đã đăng ký</dt><dd class="stat-num" id="stResidents">–</dd></div>
+        <div class="stat"><dt class="stat-label">Tổng tiền lưu thông</dt><dd class="stat-num" id="stMoney">–</dd></div>
+        <div class="stat"><dt class="stat-label">Lãi gửi ngân hàng</dt><dd class="stat-num">2<small>% /ngày</small></dd></div>
+      </dl>
+    </aside>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="cols-forum">
+    <header class="section-head">
+      <p class="kicker">Diễn đàn cư dân</p>
+      <h2 class="section-title">Hỏi đáp, khoe nhà, <em>rao đồ</em></h2>
+      <p class="section-lead">Diễn đàn của thị trấn đã mở: hỏi luật, khoe công trình, tuyển người vào town hay rao đồ trên chợ — dùng chung tài khoản web + game, đăng nhập là viết bài được ngay.</p>
+      <a class="btn" href="/oldtown-web-demo/dien-dan">Vào diễn đàn →</a>
+    </header>
+    <div class="f-home-card">
+      <div class="f-home-title">Chủ đề đang hot</div>
+      <div id="forumHot"><p class="f-hot-meta">Đang tải chủ đề đang hot…</p></div>
+      <a class="chat-input" href="/oldtown-web-demo/dien-dan"><span>Vào diễn đàn để viết bài</span><i aria-hidden="true"></i></a>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-systems" id="he-thong">
+  <div class="sec-side">
+    <p class="kicker">Mục lục</p>
+    <h2 class="section-title">Tám hệ thống <em>làm nên thị trấn</em></h2>
+    <p class="section-lead">Mọi con số dưới đây là thông số thật đang chạy trong game — không phải lời quảng cáo. Bấm từng mục để xem hướng dẫn chi tiết.</p>
+    <img class="art art-town" src="/oldtown-web-demo/static/img/art/town.png" width="480" height="468" alt="Mô hình thị trấn OLD TOWN: tháp đồng hồ, nhà mái xanh, quảng trường, sạp chợ và ruộng lúa" loading="lazy">
+  </div>
+  <ol class="sys-list">
+    <li class="sys"><a href="/oldtown-web-demo/huong-dan">
+      <span class="slot"><img src="/oldtown-web-demo/static/img/px/house.svg" width="32" height="32" alt=""></span>
+      <div class="sys-body">
+        <div class="sys-head"><span class="sys-num">01</span><h3>Làng &amp; đất đai</h3><span class="sys-key">500₫/ô</span></div>
+        <p>Lập làng <b>50.000₫</b> hoặc gia nhập làng có sẵn; mua ô đất <b>500₫/ô</b> (các ô phải liền kề). Mỗi cư dân có căn cước <b>/cccd</b> ghi lịch sử cư trú. Đất đã claim được bảo vệ tuyệt đối khỏi phá hoại.</p>
+        <div class="sys-cmds"><span class="cmd">/town new</span><span class="cmd">/town claim</span><span class="cmd">/cccd</span></div>
+      </div>
+    </a></li>
+    <li class="sys"><a href="/oldtown-web-demo/huong-dan">
+      <span class="slot"><img src="/oldtown-web-demo/static/img/px/emerald.svg" width="32" height="32" alt=""></span>
+      <div class="sys-body">
+        <div class="sys-head"><span class="sys-num">02</span><h3>Kinh tế &amp; ngân hàng</h3><span class="sys-key">2%/ngày</span></div>
+        <p>Shop định giá tự động theo cung cầu, chợ đấu giá người chơi với người chơi, giao dịch tận tay an toàn. Gửi ngân hàng hưởng lãi <b>2% mỗi ngày</b> — gửi 100.000₫, mỗi sáng thức dậy có thêm 2.000₫.</p>
+        <div class="sys-cmds"><span class="cmd">/shop</span><span class="cmd">/ah</span><span class="cmd">/bank</span></div>
+      </div>
+    </a></li>
+    <li class="sys"><a href="/oldtown-web-demo/huong-dan">
+      <span class="slot"><img src="/oldtown-web-demo/static/img/px/clock.svg" width="32" height="32" alt=""></span>
+      <div class="sys-body">
+        <div class="sys-head"><span class="sys-num">03</span><h3>Điểm danh &amp; giờ chơi</h3><span class="sys-key">500₫/ngày</span></div>
+        <p>Điểm danh mỗi ngày <b>500₫</b>, cộng dồn chuỗi ngày liên tiếp <b>+100₫/ngày</b> (tối đa 7 ngày → 1.200₫/ngày). Chơi đủ 1 giờ nhận <b>5.000₫</b>; mốc 5 giờ nhận thêm <b>30.000₫</b>.</p>
+        <div class="sys-cmds"><span class="cmd">/diemdanh</span><span class="cmd">/playtime</span></div>
+      </div>
+    </a></li>
+    <li class="sys"><a href="/oldtown-web-demo/luat">
+      <span class="slot"><img src="/oldtown-web-demo/static/img/px/skull.svg" width="32" height="32" alt=""></span>
+      <div class="sys-body">
+        <div class="sys-head"><span class="sys-num">04</span><h3>Hầm ngục 10 cấp</h3><span class="sys-key">10 × 10 level</span></div>
+        <p>Hệ thống danh hiệu <b>10 level lớn × 10 level nhỏ</b>: càng leo cao càng cộng HP gốc, tỉ lệ chí mạng và tỉ lệ rơi <b>xu cổ</b> — nguyên liệu quý để đổi trang bị hiếm. Nội dung dựng riêng cho OLD TOWN.</p>
+        <div class="sys-cmds"><span class="cmd">/danhhieu</span></div>
+      </div>
+    </a></li>
+    <li class="sys"><a href="/oldtown-web-demo/huong-dan">
+      <span class="slot"><img src="/oldtown-web-demo/static/img/px/anvil.svg" width="32" height="32" alt=""></span>
+      <div class="sys-body">
+        <div class="sys-head"><span class="sys-num">05</span><h3>Cường hóa trang bị</h3><span class="sys-key">+1 → +12</span></div>
+        <p>Nâng vũ khí và giáp từ <b>+1 tới +12</b> bằng đá cường hóa rơi từ quái. Mỗi cấp cộng <b>+0,5 sát thương</b> (vũ khí) hoặc <b>+0,4 giáp</b>; cấp càng cao tỉ lệ thành công càng thấp — bảng tỉ lệ thật ở mục dưới.</p>
+        <div class="sys-cmds"><span class="cmd">/cuonghoa</span></div>
+      </div>
+    </a></li>
+    <li class="sys"><a href="/oldtown-web-demo/luat">
+      <span class="slot"><img src="/oldtown-web-demo/static/img/px/sword.svg" width="32" height="32" alt=""></span>
+      <div class="sys-body">
+        <div class="sys-head"><span class="sys-num">06</span><h3>Chiến tranh &amp; chiếm đỉnh</h3><span class="sys-key">10 đấu 10</span></div>
+        <p>Làng tuyên chiến làng: phí tuyên chiến <b>5.000₫</b>, chuẩn bị 10 phút, giao tranh 30 phút, tối đa <b>10 đấu 10</b>. Sự kiện <b>KOTH</b> chiếm điểm 15 phút — đứng trong vòng chiếm 5 ô để ghi điểm cho đội.</p>
+        <div class="sys-cmds"><span class="cmd">/war</span><span class="cmd">/koth</span></div>
+      </div>
+    </a></li>
+    <li class="sys"><a href="/oldtown-web-demo/huong-dan">
+      <span class="slot"><img src="/oldtown-web-demo/static/img/px/target.svg" width="32" height="32" alt=""></span>
+      <div class="sys-body">
+        <div class="sys-head"><span class="sys-num">07</span><h3>Đấu tay đôi &amp; treo thưởng</h3><span class="sys-key">Ăn cược</span></div>
+        <p>Thách đấu <b>/duel</b> ăn cược trực tiếp, hoặc treo thưởng truy nã bất kỳ ai bằng <b>/bounty</b> — kẻ săn người bị săn đổi ngôi liên tục, tiền thưởng về tay người hạ được mục tiêu.</p>
+        <div class="sys-cmds"><span class="cmd">/duel</span><span class="cmd">/bounty</span></div>
+      </div>
+    </a></li>
+    <li class="sys"><a href="/oldtown-web-demo/luat">
+      <span class="slot"><img src="/oldtown-web-demo/static/img/px/shield.svg" width="32" height="32" alt=""></span>
+      <div class="sys-body">
+        <div class="sys-head"><span class="sys-num">08</span><h3>Cảnh sát &amp; kỷ cương</h3><span class="sys-key">Phạt nghiêm</span></div>
+        <p>Thị trấn có lực lượng cảnh sát trong game: vi phạm bị bắt giam tại chỗ. Cấm tuyệt đối hack/cheat và phá hoại — hình phạt từ giam giữ tới cấm chơi vĩnh viễn. <b>Luật rõ, phạt nghiêm, chơi lâu dài.</b></p>
+        <div class="sys-cmds"><span class="cmd">/police</span></div>
+      </div>
+    </a></li>
+  </ol>
+</section>
+
+<section class="sec">
+  <header class="section-head">
+    <p class="kicker">Lộ trình tân thủ</p>
+    <h2 class="section-title">Ngày đầu ở <em>OLD TOWN</em></h2>
+    <p class="section-lead">Năm bước từ lúc mở game tới khi có ô đất đầu tiên — tân thủ làm đúng thứ tự này là không bao giờ lạc.</p>
+  </header>
+  <div class="win">
+    <div class="win-bar"><span>Tiến trình</span><span class="win-meta">5 bước</span></div>
+    <ol class="win-screen roadmap">
+      <li class="rm-step">
+        <span class="rm-node"><img src="/oldtown-web-demo/static/img/px/head.svg" width="32" height="32" alt=""></span>
+        <div class="rm-tip"><h3><span>Bước 1</span>Đăng ký &amp; đăng nhập</h3><p>Tạo tài khoản ngay trên trang này (dùng chung web + game) hoặc vào game gõ /register. Mỗi lần vào lại chỉ cần /login. Nhớ gõ tên đúng chữ hoa/thường như lúc đăng ký.</p></div>
+      </li>
+      <li class="rm-step">
+        <span class="rm-node"><img src="/oldtown-web-demo/static/img/px/book.svg" width="32" height="32" alt=""></span>
+        <div class="rm-tip"><h3><span>Bước 2</span>Nhận sách &amp; điểm danh</h3><p>Gõ /sach để nhận cuốn “Luật &amp; Hướng Dẫn”, rồi /diemdanh nhận 500₫ khởi nghiệp. Đọc sách 5 phút, tiết kiệm cả ngày mò mẫm.</p></div>
+      </li>
+      <li class="rm-step">
+        <span class="rm-node"><img src="/oldtown-web-demo/static/img/px/coin.svg" width="32" height="32" alt=""></span>
+        <div class="rm-tip"><h3><span>Bước 3</span>Kiếm vốn</h3><p>Chơi đủ 1 giờ nhận 5.000₫ từ /playtime; bán nông sản và khoáng sản ở /shop; rao đồ tốt lên chợ /ah để được giá cao hơn.</p></div>
+      </li>
+      <li class="rm-step">
+        <span class="rm-node"><img src="/oldtown-web-demo/static/img/px/house.svg" width="32" height="32" alt=""></span>
+        <div class="rm-tip"><h3><span>Bước 4</span>Vào làng &amp; mua đất</h3><p>Xin vào một làng bằng /town join &lt;tên làng&gt; rồi mua ô đất 500₫/ô với /town claim. Từ đây bạn xây nhà an toàn tuyệt đối.</p></div>
+      </li>
+      <li class="rm-step">
+        <span class="rm-node rm-goal"><img src="/oldtown-web-demo/static/img/px/sword.svg" width="32" height="32" alt=""></span>
+        <div class="rm-tip"><h3><span>Bước 5</span>Làm giàu &amp; leo hầm</h3><p>Gửi tiền nhàn rỗi vào /bank hưởng lãi 2%/ngày, cường hóa trang bị, lập đội leo hầm ngục và săn xu cổ đổi đồ hiếm.</p></div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="cols-2">
+    <div>
+      <h3 class="block-title">Số liệu: <em>tỉ lệ cường hóa thật</em></h3>
+      <div class="win">
+        <div class="win-bar"><span>Cường hóa</span><span class="win-meta">tỉ lệ thành công</span></div>
+        <ol class="forge" aria-label="Tỉ lệ cường hóa thành công theo cấp">
+          <li class="forge-cell t-ok"><b>+1</b><span>100%</span><i class="dura d-100"></i></li>
+          <li class="forge-cell t-ok"><b>+2</b><span>95%</span><i class="dura d-95"></i></li>
+          <li class="forge-cell t-ok"><b>+3</b><span>90%</span><i class="dura d-90"></i></li>
+          <li class="forge-cell t-ok"><b>+4</b><span>85%</span><i class="dura d-85"></i></li>
+          <li class="forge-cell t-mid"><b>+5</b><span>75%</span><i class="dura d-75"></i></li>
+          <li class="forge-cell t-mid"><b>+6</b><span>65%</span><i class="dura d-65"></i></li>
+          <li class="forge-cell t-mid"><b>+7</b><span>55%</span><i class="dura d-55"></i></li>
+          <li class="forge-cell t-low"><b>+8</b><span>45%</span><i class="dura d-45"></i></li>
+          <li class="forge-cell t-low"><b>+9</b><span>35%</span><i class="dura d-35"></i></li>
+          <li class="forge-cell t-low"><b>+10</b><span>25%</span><i class="dura d-25"></i></li>
+          <li class="forge-cell t-bad"><b>+11</b><span>18%</span><i class="dura d-18"></i></li>
+          <li class="forge-cell t-bad"><b>+12</b><span>12%</span><i class="dura d-12"></i></li>
+        </ol>
+      </div>
+      <p class="data-note">Cường hóa thất bại ở cấp cao sẽ <b>tụt 1 cấp</b>. Đá cường hóa rơi từ quái: Enderman 10%, Blaze 12%, Warden 50%, Rồng Ender và Wither chắc chắn rơi. Đây là thông số trích từ cấu hình đang chạy của server.</p>
+    </div>
+    <div>
+      <h3 class="block-title">Bảng vàng: <em>top 5 cư dân giàu nhất</em></h3>
+      <div class="scoreboard">
+        <div class="scoreboard-title">Top tiền</div>
+        <ol class="top-preview" id="topPreview"><li><span class="tp-name muted">Đang tải số liệu từ game…</span></li></ol>
+      </div>
+      <p class="data-note">Số dư VNĐ thật trong game, làm mới mỗi phút. <a href="/oldtown-web-demo/bang-xep-hang">Xem bảng xếp hạng đầy đủ →</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="cta-band">
+    <img class="art art-mine" src="/oldtown-web-demo/static/img/art/mine.png" width="216" height="336" alt="Mặt cắt lòng đất có cổng hầm ngục" loading="lazy">
+    <div class="cta-text">
+      <h2>Thị trấn đang chờ cư dân mới</h2>
+      <p>Tạo tài khoản mất chưa tới một phút. Vào game, điểm danh, và bắt đầu xây ngôi nhà đầu tiên của bạn tối nay.</p>
+      <div class="cta-actions">
+        <a class="btn btn-green btn-lg" href="/oldtown-web-demo/tai-khoan">Đăng ký miễn phí</a>
+        <a class="btn btn-lg" href="/oldtown-web-demo/huong-dan">Đọc hướng dẫn</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer class="footer">
+  <div class="footer-grass" aria-hidden="true"></div>
+  <div class="footer-soil">
+    <div class="footer-inner">
+      <div class="footer-about">
+        <div class="footer-brand"><img src="/oldtown-web-demo/static/img/art/block.png" width="32" height="36" alt="">OLD TOWN</div>
+        <p>Server Minecraft sinh tồn Việt Nam. Một tài khoản dùng chung cho web và game — đăng ký ở đâu, chơi ở đó.</p>
+      </div>
+      <nav class="footer-links" aria-label="Liên kết cuối trang">
+        <div class="footer-col">
+          <span class="footer-h">Thị trấn</span>
+          <a href="/oldtown-web-demo/luat">Luật server</a>
+          <a href="/oldtown-web-demo/huong-dan">Hướng dẫn tân thủ</a>
+          <a href="/oldtown-web-demo/cap-nhat">Nhật ký cập nhật</a>
+        </div>
+        <div class="footer-col">
+          <span class="footer-h">Cư dân</span>
+          <a href="/oldtown-web-demo/dien-dan">Diễn đàn cư dân</a>
+          <a href="/oldtown-web-demo/bang-xep-hang">Bảng xếp hạng tiền</a>
+          <a href="/oldtown-web-demo/tai-khoan">Đăng ký / Đăng nhập</a>
+        </div>
+      </nav>
+    </div>
+  </div>
+  <div class="footer-stone">
+    <i class="ore ore-1" aria-hidden="true"></i><i class="ore ore-2" aria-hidden="true"></i><i class="ore ore-3" aria-hidden="true"></i><i class="ore ore-4" aria-hidden="true"></i>
+    <div class="footer-note">
+      <span>OLD TOWN · Mọi số liệu trên trang đều lấy trực tiếp từ game</span>
+      <span>Không phải sản phẩm chính thức của Minecraft. Không liên kết với Mojang hay Microsoft.</span>
+    </div>
+  </div>
+  <div class="footer-bedrock" aria-hidden="true"></div>
+</footer>
+<div class="demo-note" role="note">Bản demo giao diện · dữ liệu mẫu · đăng nhập và đăng bài không hoạt động ở đây</div>
+<div id="toast" class="toast" role="status"></div>
+<script src="/oldtown-web-demo/static/app.js?v=mwd7g087"></script>
+</body>
+</html>

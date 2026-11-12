@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Chợ / Trade</title>
+<meta name="description" content="OLD TOWN — server Minecraft sinh tồn Việt Nam: xây thị trấn, kinh tế, hầm ngục 10 cấp. Chơi chung PC & điện thoại (PE).">
+<meta name="theme-color" content="#151321">
+<meta name="color-scheme" content="dark">
+<link rel="icon" href="/oldtown-web-demo/static/img/icon.png">
+<link rel="apple-touch-icon" href="/oldtown-web-demo/static/img/icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Handjet:wght@400..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/oldtown-web-demo/static/style.css?v=mwd7g08y">
+<script src="/oldtown-web-demo/static/forum.js?v=mwd7g08y" defer></script>
+<meta name="robots" content="noindex">
+</head>
+<body>
+<a class="skip-link" href="#main">Bỏ qua, tới nội dung chính</a>
+<header class="hud">
+  <div class="hud-in">
+    <a class="brand" href="/oldtown-web-demo/" aria-label="OLD TOWN — về trang chủ">
+      <img class="brand-mark" src="/oldtown-web-demo/static/img/art/block.png" width="32" height="36" alt="">
+      <span class="brand-name">OLD TOWN</span>
+    </a>
+    <nav class="hotbar" id="navLinks" aria-label="Điều hướng chính">
+      <a href="/oldtown-web-demo/"><img src="/oldtown-web-demo/static/img/px/house.svg" width="24" height="24" alt=""><span>Trang chủ</span></a>
+      <a href="/oldtown-web-demo/luat"><img src="/oldtown-web-demo/static/img/px/book.svg" width="24" height="24" alt=""><span>Luật</span></a>
+      <a href="/oldtown-web-demo/huong-dan"><img src="/oldtown-web-demo/static/img/px/compass.svg" width="24" height="24" alt=""><span>Hướng dẫn</span></a>
+      <a href="/oldtown-web-demo/dien-dan" class="active"><img src="/oldtown-web-demo/static/img/px/sign.svg" width="24" height="24" alt=""><span>Diễn đàn</span></a>
+      <a href="/oldtown-web-demo/cap-nhat"><img src="/oldtown-web-demo/static/img/px/paper.svg" width="24" height="24" alt=""><span>Cập nhật</span></a>
+      <a href="/oldtown-web-demo/bang-xep-hang"><img src="/oldtown-web-demo/static/img/px/coin.svg" width="24" height="24" alt=""><span>Top tiền</span></a>
+      <a href="/oldtown-web-demo/tai-khoan"><img src="/oldtown-web-demo/static/img/px/head.svg" width="24" height="24" alt=""><span>Tài khoản</span></a>
+    </nav>
+    <a class="hud-status" href="/oldtown-web-demo/#vao-server" title="Trạng thái server — bấm để xem địa chỉ vào chơi">
+      <span class="dot" id="hudDot"></span><span id="hudOnline">…</span>
+    </a>
+  </div>
+  <div class="xp" aria-hidden="true"><i id="xpFill"></i></div>
+</header>
+<main class="page" id="main">
+<div class="forum-shell">
+<div class="f-topbar"><button class="f-btn f-drawer-btn" id="forumDrawerBtn" type="button" aria-label="Mở chuyên mục"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg> Chuyên mục</button><a class="f-logo" href="/oldtown-web-demo/dien-dan"><span class="f-logo-mark">OT</span><span><span class="f-logo-name">Diễn đàn</span><span class="f-logo-sub">OLD TOWN</span></span></a><form class="f-search-pill" method="get" action="/oldtown-web-demo/dien-dan"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg><input type="search" name="q" value="" placeholder="Tìm chủ đề, hướng dẫn…" aria-label="Tìm trong diễn đàn"></form><a class="f-btn f-btn-accent" href="/oldtown-web-demo/dien-dan/tao-bai">Tạo bài viết</a><a class="f-btn" href="/oldtown-web-demo/tai-khoan">Đăng nhập</a></div><div class="f-drawer-overlay" id="forumDrawerOverlay"></div><div class="f-grid"><aside class="f-side" id="forumSide"><div class="f-card"><div class="f-profile"><span class="f-avatar f-av-3">?</span><span><span class="f-pname">Chưa đăng nhập</span><span class="f-ptrust">Đăng nhập để viết bài, bình chọn</span></span></div><div class="f-mt"><a class="f-btn f-btn-accent" href="/oldtown-web-demo/tai-khoan">Đăng nhập</a></div></div><div class="f-side-label">Diễn đàn</div><a class="f-navlink" href="/oldtown-web-demo/dien-dan">Trang chủ diễn đàn</a><a class="f-navlink" href="/oldtown-web-demo/luat">Luật &amp; nội quy</a><a class="f-navlink" href="/oldtown-web-demo/bang-xep-hang">Bảng xếp hạng</a><div class="f-side-label">Chuyên mục</div><a class="f-catlink" href="/oldtown-web-demo/dien-dan/chuyen-muc/1"><span class="f-cc-1"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 11 18-5v12L3 13v-2z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></svg></span><span>Thông báo</span><span class="f-count">2 chủ đề</span></a><a class="f-catlink" href="/oldtown-web-demo/dien-dan/chuyen-muc/2"><span class="f-cc-2"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></span><span>Hướng dẫn người mới</span><span class="f-count">1 chủ đề</span></a><a class="f-catlink" href="/oldtown-web-demo/dien-dan/chuyen-muc/3"><span class="f-cc-3"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg></span><span>Khoe nhà / Build</span><span class="f-count">1 chủ đề</span></a><a class="f-catlink" href="/oldtown-web-demo/dien-dan/chuyen-muc/4"><span class="f-cc-4"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><span>Tuyển town / Tìm đồng đội</span><span class="f-count">1 chủ đề</span></a><a class="f-catlink active" href="/oldtown-web-demo/dien-dan/chuyen-muc/5"><span class="f-cc-5"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg></span><span>Chợ / Trade</span><span class="f-count">1 chủ đề</span></a><a class="f-catlink" href="/oldtown-web-demo/dien-dan/chuyen-muc/6"><span class="f-cc-6"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></span><span>Hỏi đáp / Báo lỗi</span><span class="f-count">2 chủ đề</span></a><a class="f-catlink" href="/oldtown-web-demo/dien-dan/chuyen-muc/7"><span class="f-cc-7"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span><span>Chuyện ngoài lề</span><span class="f-count">0 chủ đề</span></a></aside><div class="f-main"><p class="f-crumb"><a href="/oldtown-web-demo/dien-dan">Diễn đàn</a> / Chợ / Trade</p><div class="f-hero"><h1>Chợ / Trade</h1><p>Mua bán qua /ah và /trade, rao giá và tìm món đang cần</p></div><div class="f-tabs"><a href="/oldtown-web-demo/dien-dan/chuyen-muc/5?sort=new" class="active">Mới nhất</a><a href="/oldtown-web-demo/dien-dan/chuyen-muc/5?sort=hot">Đang hot</a><a href="/oldtown-web-demo/dien-dan/chuyen-muc/5?sort=top">Nhiều thích</a></div><div class="f-list"><div class="f-thread" data-href="/oldtown-web-demo/dien-dan/chu-de/6" tabindex="0" role="link"><span class="f-avatar f-av-1">TH</span><span class="f-thread-main"><span class="f-thread-title">[Bán] Quặng sắt + kim cương đào tay, giá chợ — giao dịch qua /ah cho an toàn</span><span class="f-thread-excerpt">Mình là thợ mỏ, vừa xong chuyến đào sâu nên dư: sắt thô, ít kim cương và redstone</span><span class="f-thread-meta">ThoMo99 · 04/11/2026 16:20 · Chợ / Trade <span class="f-badge sample">Bài mẫu</span></span><span class="f-thread-tags"><a class="f-tag" href="/oldtown-web-demo/dien-dan?tag=bán">#bán</a> <a class="f-tag" href="/oldtown-web-demo/dien-dan?tag=quặng">#quặng</a></span></span><span class="f-thread-stats"><b>1</b> trả lời<br><b>198</b> lượt xem<br><b>3</b> thích</span></div></div><div class="f-mt-lg"><a class="f-btn f-btn-accent" href="/oldtown-web-demo/dien-dan/tao-bai">Tạo bài viết mới</a></div></div><aside class="f-rail"><div class="f-card"><h3>Cư dân nổi bật</h3><div class="f-rail-row"><span class="f-rank">1</span><span class="f-avatar f-av-2 f-av-sm">AD</span><span class="f-rname">AdminOT</span><span class="f-rmeta">4 bài · 6 thích</span></div><div class="f-rail-row"><span class="f-rank">2</span><span class="f-avatar f-av-3 f-av-sm">MO</span><span class="f-rname">ModLinh</span><span class="f-rmeta">3 bài · 5 thích</span></div><div class="f-rail-row"><span class="f-rank">3</span><span class="f-avatar f-av-9 f-av-sm">LA</span><span class="f-rname">LaoNongOT</span><span class="f-rmeta">4 bài · 3 thích</span></div><div class="f-rail-row"><span class="f-rank">4</span><span class="f-avatar f-av-2 f-av-sm">BE</span><span class="f-rname">BeThaoPE</span><span class="f-rmeta">5 bài · 3 thích</span></div><div class="f-rail-row"><span class="f-rank">5</span><span class="f-avatar f-av-2 f-av-sm">CU</span><span class="f-rname">CuDanMoi</span><span class="f-rmeta">4 bài · 3 thích</span></div></div><div class="f-card"><h3>Luật cần nhớ</h3><div class="f-law"><p><b>§ 5</b> Giao dịch ngoài hệ thống tự chịu rủi ro, admin không đòi đồ hộ.</p><p><b>§ 6</b> Admin chỉ can thiệp hack/cheat, lừa đảo hệ thống, lỗi diện rộng.</p><p><b>§ 7</b> Trần farm 15 con/chunk, quá 8 con/ô bị ngạt; đa số linh kiện redstone bị chặn.</p></div></div><div class="f-card"><h3>Thống kê</h3><div class="f-law"><p>8 thành viên đã viết bài</p><p>10 chủ đề · 25 bài viết</p></div></div></aside></div>
+</div>
+
+</main>
+<footer class="footer">
+  <div class="footer-grass" aria-hidden="true"></div>
+  <div class="footer-soil">
+    <div class="footer-inner">
+      <div class="footer-about">
+        <div class="footer-brand"><img src="/oldtown-web-demo/static/img/art/block.png" width="32" height="36" alt="">OLD TOWN</div>
+        <p>Server Minecraft sinh tồn Việt Nam. Một tài khoản dùng chung cho web và game — đăng ký ở đâu, chơi ở đó.</p>
+      </div>
+      <nav class="footer-links" aria-label="Liên kết cuối trang">
+        <div class="footer-col">
+          <span class="footer-h">Thị trấn</span>
+          <a href="/oldtown-web-demo/luat">Luật server</a>
+          <a href="/oldtown-web-demo/huong-dan">Hướng dẫn tân thủ</a>
+          <a href="/oldtown-web-demo/cap-nhat">Nhật ký cập nhật</a>
+        </div>
+        <div class="footer-col">
+          <span class="footer-h">Cư dân</span>
+          <a href="/oldtown-web-demo/dien-dan">Diễn đàn cư dân</a>
+          <a href="/oldtown-web-demo/bang-xep-hang">Bảng xếp hạng tiền</a>
+          <a href="/oldtown-web-demo/tai-khoan">Đăng ký / Đăng nhập</a>
+        </div>
+      </nav>
+    </div>
+  </div>
+  <div class="footer-stone">
+    <i class="ore ore-1" aria-hidden="true"></i><i class="ore ore-2" aria-hidden="true"></i><i class="ore ore-3" aria-hidden="true"></i><i class="ore ore-4" aria-hidden="true"></i>
+    <div class="footer-note">
+      <span>OLD TOWN · Mọi số liệu trên trang đều lấy trực tiếp từ game</span>
+      <span>Không phải sản phẩm chính thức của Minecraft. Không liên kết với Mojang hay Microsoft.</span>
+    </div>
+  </div>
+  <div class="footer-bedrock" aria-hidden="true"></div>
+</footer>
+<div class="demo-note" role="note">Bản demo giao diện · dữ liệu mẫu · đăng nhập và đăng bài không hoạt động ở đây</div>
+<div id="toast" class="toast" role="status"></div>
+<script src="/oldtown-web-demo/static/app.js?v=mwd7g08y"></script>
+</body>
+</html>
